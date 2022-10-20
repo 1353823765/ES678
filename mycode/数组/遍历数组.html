@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // for of遍历的是遍历器对象/接口
+        // 只要部署了 Symbol.iterator接口的对象
+        // 都可以使用for of进行遍历
+
+        // 部署的是values值遍历器，取得就是值
+        // 部署的是keys键遍历器，取得就是键
+        // 部署的是entries成员遍历器，取得就是键值对组成的数组
+
+        let arr = ["tom","jarry","susan","petter"];
+        console.log("arr",arr);
+        //遍历数组，默认部署的是values遍历器
+        // for( let value of arr){
+        //     console.log(value);
+        // }
+ //遍历数组，for of遍历values遍历器
+//    arr.values()返回的就是值遍历器对象
+//  for( let value of arr.values()){
+//             console.log(value);
+//         }
+ //遍历数组，for of遍历keys遍历器
+//  arr.keys()返回的就是键遍历器对象
+//  for( let key of arr.keys()){
+//             console.log(key);
+//         }
+//遍历数组，for of遍历entries遍历器
+//  arr.entries()返回的就是[键,值]遍历器对象
+//  for( let [key,value] of arr.entries()){
+//             console.log(key,value);
+//         }
+
+    arr.forEach((value,key)=>{
+        console.log(value,key);
+    })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

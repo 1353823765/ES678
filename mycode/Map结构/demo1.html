@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let m1=new Map();
+        let obj={name:"tom",age:19,sex:"男"};//#1234
+        // 添加成员
+        m1.set(obj,"人员信息");
+        console.log("m1",m1);
+        //判断是否包含某个成员
+        console.log(m1.has(obj));
+        //删除指定成员
+        m1.delete(obj);
+        console.log("m1",m1);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

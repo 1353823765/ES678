@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="js/axios.js"></script>
+  <script>
+    //第一个yield状态获取 100posts后
+    //在执行第二个yield状态获取10users
+    function* gen(){
+      var posts=yield axios.get("https://jsonplaceholder.typicode.com/posts");//100条帖子
+      console.log("posts",posts);
+      var users=yield axios.get("https://jsonplaceholder.typicode.com/users");//10个用户
+      console.log("users",users);
+    }
+    run(gen);//将来reudx核心对象reudx-saga中间件，提供run方法，遍历generator函数状态的
+
+    //将遍历generator函数中yield状态的过程，封装成一个递归函数
+    function run(generator) {
+        var myGen = generator();
+        function handle(yielded) {
+            if (!yielded.done) {
+                yielded.value.then(function(data) {
+                    return handle(myGen.next(data));
+                })
+            }}
+        return handle(myGen.next());
+    }
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

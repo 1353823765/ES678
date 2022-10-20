@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    //创建一个generator函数
+    function* test(){
+        //yield语句的返回值是undefined
+      let hi = yield "tom";  // 暂停--阻塞
+        console.log("hi",hi);
+      yield hi+"jarry"; //暂停
+      return "susan";
+    }
+    //调用generator函数返回一个遍历器对象
+    let iter=test();
+    //调用iter遍历器对象的next方法，遍历generator函数内部每一个yield状态
+
+    console.log(iter.next());//{value:"tom",done:false}
+    console.log(iter.next("你好："));//{value:"你好：jarry",done:false}
+    console.log(iter.next());//{value:"susan",done:true}
+  </script>
+</head>
+<body>
+
+</body>
+</html>

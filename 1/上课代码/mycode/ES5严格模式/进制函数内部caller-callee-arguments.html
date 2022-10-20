@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    //普通模式可以使用函数对象的三个属性
+    // "use strict";
+    //严格模式，不允许使用函数对象的三个属性
+    function test(){
+      console.log(test.caller);
+      console.log(test.callee);
+      console.log(test.arguments);
+    }
+    test();
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

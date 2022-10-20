@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        let arr=["tom","jarry","susan"];
+        //调用遍历器函数，返回一个遍历器对象
+        let iter=arr[Symbol.iterator]();//arr.values()
+        //逐个遍历数组成员
+        console.log(iter.next());//{value:"tom",done:false}
+        console.log(iter.next());//{value:"jarry",done:false}
+        console.log(iter.next());//{value:"susan",done:false}
+        console.log(iter.next());//{value:"undefined",done:true}
+    </script>
+</head>
+<body>
+
+</body>
+</html>

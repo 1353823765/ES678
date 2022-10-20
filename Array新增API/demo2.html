@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组去重</title>
+    <script>
+        let arr=["tom","jarry","susan","tom","jarry","赵四"];
+        console.log("arr",arr);
+        //set结构只能有唯一的值，自动去掉相同的值
+        //set结构会自动去重
+        let s1=new Set(arr);
+        console.log("s1",s1);
+        //将Set对象转换为数组对象
+        //类名.静态方法();
+        let arr2=Array.from(s1);
+        console.log("arr2",arr2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    //普通模式下只有两种作用域：全局作用域和局部作用域
+    "use strict";
+    //严格模式下有三种作用域：全局作用域和局部作用域和eval作用域
+    var x=100;
+    console.log("eval外 x",x);
+    eval("var x=200; console.log('x',x);");
+    console.log("eval外 x",x);
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

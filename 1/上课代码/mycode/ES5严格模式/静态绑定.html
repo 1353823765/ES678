@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<script>
+     //JavaScript运行动态绑定：预编译阶段不确定属性和方法属于哪个对象的，等到运行的时候再确定属性或方法是哪个对象的
+     //这样执行效率比较低
+
+
+     // "use strict";
+     //严格模式下不允许动态绑定，也就无法使用with结构
+     with(Math){
+       console.log(PI);
+       console.log(random());
+     }
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/axios.js"></script>
+    <script>
+        axios.get("https://randomuser.me/api")//发送请求pending
+        .then(res=>{
+            console.log("服务器返回的响应对象res",res);
+            console.log("服务器返回的响应对象的数据部分res.data",res.data);
+            console.log("res.data.results[0].email",res.data.results[0].email);
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

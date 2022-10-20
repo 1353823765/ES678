@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //ES6 类里面的方法和对象中的方法省略function
+        //父对象
+        let person={
+            name:"tom",
+            age:19,
+            sex:"男",
+            say(){
+                console.log("hello");
+            }
+        }
+        //子对象继续父对象的属性和方法
+        let student={
+            __proto__:person,
+            sno:"10001",
+            sdept:"计算机系",
+            study(){
+              console.log("持之以恒");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

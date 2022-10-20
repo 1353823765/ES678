@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="js/axios.js"></script>
+  <script>
+    //第一个yield状态获取 100posts后
+    //在执行第二个yield状态获取10users
+    function* gen(){
+      var posts=yield axios.get("https://jsonplaceholder.typicode.com/posts");//100条帖子
+      console.log("posts",posts);
+      var users=yield axios.get("https://jsonplaceholder.typicode.com/users");//10个用户
+      console.log("users",users);
+    }
+    var g1=gen();
+    g1.next().value.then(function(posts){//地狱回调--可读性差
+      g1.next(posts).value.then(function(users){
+        g1.next(users);
+      })
+    })
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

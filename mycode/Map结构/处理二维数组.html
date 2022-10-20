@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr=[["name","tom"],["age",19],["sex","男"]];
+        //数组转换成map结构
+        let m1=new Map(arr);
+        console.log("m1",m1);
+        console.log("是否包含name",m1.has("name"));
+       //...map对象前面，将map结构转换数组
+        console.log(...m1);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

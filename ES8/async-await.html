@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let fakeAsync=()=>{//模拟一个异步
+            return new Promise(resolve=>{
+                console.log("fakeAsync");
+                setTimeout(()=>{
+                    resolve("假装的数据....");
+                },2000)
+            })
+        }
+        let test= async ()=>{
+            let res=await fakeAsync();//阻塞等待
+            console.log("res",res);
+        }
+  test();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

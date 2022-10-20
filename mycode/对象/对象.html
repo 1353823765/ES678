@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let obj1={name:"tom",age:19,sex:"男"};
+        let obj2={name:"jarry",x:100,y:200};
+        let obj3={z:10000,...obj1,...obj2};
+        //特别注意：数组内不能有重复属性，后面同名的属性会覆盖前面同名的属性
+        console.log("obj3",obj3);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

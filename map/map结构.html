@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+     let m1=new Map() 
+     m1.set("新添加的",true)
+
+    console.log(m1.set("第2个方法",false)) 
+     console.log(m1)
+     for(let [key,value] of m1){
+        console.log(key)
+        console.log(value)
+     }
+    m1.forEach((key,value)=>{
+        console.log(key,value)
+    })
+     
+    //  console.log(typeof m1)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

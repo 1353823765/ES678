@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/axios.js"></script>
+    <script>
+        //地狱回调--由于业务需求
+        axios.get("https://randomuser.me/api")
+        .then(res=>{
+            console.log("email",res.data.results[0].email);
+            axios.get("https://jsonplaceholder.typicode.com/posts")
+            .then(res=>{
+                console.log("100帖子:",res.data);
+            })
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

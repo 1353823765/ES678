@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let s1=new Set();
+        console.dir(s1);
+        // 添加成员:
+        //链式写法
+        s1.add(2).add(3).add(10).add(5).add(9);
+        console.log("s1",s1);
+        //属性 size 元素个数
+        console.log("元素个数",s1.size);
+        //删除 5值，返回true/false
+        console.log(s1.delete(5));
+        //判断是否包含某个值 has(值)
+        console.log("s1中是否有9这个值",s1.has(9));
+        //清除所有元素/成员
+        s1.clear();
+        console.log("s1",s1);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
